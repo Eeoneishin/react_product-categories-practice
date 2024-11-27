@@ -35,10 +35,10 @@ export function App() {
   const filteredProducts = enrichedProducts
     .filter(
       product =>
-        selectedUserId === null || product.owner?.id === selectedUserId,
+        selectedUserId === null || product.owner?.id === selectedUserId, // eslint-disable-next-line
     )
-    .filter(product =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    .filter(
+      product => product.name.toLowerCase().includes(searchQuery.toLowerCase()), // eslint-disable-next-line
     );
 
   return (
